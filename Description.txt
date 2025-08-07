@@ -1,7 +1,130 @@
-echo "# NetZ" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/77Arafat383/NetZ.git
-git push -u origin main
+https://github.com/77Arafat383/NetZ.git
+
+
+📄 Project Description
+netZ is a full-stack social media application inspired by popular platforms like Facebook. Designed for global user connection and communication, netZ allows users to create personal accounts, connect with others, share content, and engage through likes, comments, and notifications — all in real time.
+
+This platform is developed using Node.js, Express.js, and MySQL for a scalable and secure backend, with a dynamic and user-friendly front-end powered by JavaScript, HTML, and CSS.
+
+
+
+🚀 Core Features:
+
+User Authentication:
+    1. Register with email, username, and password
+    2. Secure login using JWT (JSON Web Tokens)
+    3. Password hashing with bcrypt.
+
+2. User Profiles
+    1. Upload and update profile pictures
+    2. Edit personal information (bio, name, etc.)
+    3. View personal posts and interactions
+
+3. Social Connectivity
+    1. Follow and unfollow users
+    2. View followers and following lists
+    3. Real-time feed from followed users
+
+4. Post Management
+    1. Create posts with text and images
+    2. View posts in a timeline
+    3. Edit and delete your own posts
+
+5. Engagement Features
+    1. Like, comment, and share posts
+    2. Count likes, comments, and shares
+    3. Real-time interaction updates
+
+6.  Notifications System
+    -> Receive alerts when someone:
+       1. Likes your post/photo
+       2. Comments on your post
+       3. Shares your content
+
+7.  Media Upload
+    1. Upload photos securely using Multer
+    2. Display uploaded images on profile and posts
+
+
+
+
+
+Tech Stack
+
+Backend: Node.js, Express.js
+Database: MySQL
+Frontend: HTML, CSS, JavaScript (can scale to React.js)
+
+Security & Middleware:
+  1. bcrypt (password hashing)
+  2. jsonwebtoken (auth token)
+  3. helmet, cors (security and cross-origin support)
+  4. multer (file upload handling)
+
+
+
+
+
+
+
+netZ/
+│
+├── backend/
+│   ├── config/
+│   │   └── db.js                    # MySQL connection config
+│
+│   ├── controllers/
+│   │   ├── authController.js        # Register/Login logic
+│   │   ├── userController.js        # Profile & follow actions
+│   │   ├── postController.js        # Create/view posts
+│   │   ├── commentController.js     # Commenting logic
+│   │   ├── likeController.js        # Like/unlike logic
+│   │   └── notificationController.js# Handle notifications
+│
+│   ├── middleware/
+│   │   ├── authMiddleware.js        # JWT token verification
+│   │   ├── errorHandler.js          # Global error handler
+│   │   └── uploadMiddleware.js      # Multer config for file uploads
+│
+│   ├── models/
+│   │   ├── userModel.js             # User schema/queries
+│   │   ├── postModel.js             # Post schema/queries
+│   │   ├── commentModel.js          # Comment schema/queries
+│   │   ├── likeModel.js             # Like schema/queries
+│   │   ├── followModel.js           # Follow relationships
+│   │   └── notificationModel.js     # Notification data logic
+│
+│   ├── routes/
+│   │   ├── auth.js                  # /api/auth routes
+│   │   ├── users.js                 # /api/users routes
+│   │   ├── posts.js                 # /api/posts routes
+│   │   ├── comments.js              # /api/comments routes
+│   │   ├── likes.js                 # /api/likes routes
+│   │   └── notifications.js         # /api/notifications routes
+│
+│   ├── uploads/
+│   │   └── profile/                 # Uploaded profile pictures
+│   │   └── posts/                   # Uploaded post images
+│
+│   ├── utils/
+│   │   └── generateToken.js         # JWT token generation
+│
+│   ├── .env                         # Environment variables
+│   ├── app.js                       # Express server setup
+│   └── package.json                 # Backend dependencies
+│
+├── frontend/
+│   ├── public/
+│   │   └── index.html               # HTML entry point
+│   ├── src/
+│   │   ├── css/                     # Stylesheets
+│   │   ├── js/                      # JavaScript frontend logic
+│   │   └── assets/                  # Icons/images
+│   └── README.md                    # Frontend notes
+│
+├── README.md                        # Project overview
+└── LICENSE                          # Project license
+
+
+
+
